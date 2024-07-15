@@ -1,12 +1,14 @@
 package com.sagar.simpleWeb.Model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
 
 //@AllArgsConstructor
 @Component
+@Entity
 public class Product {
-
-
+    @Id
     private int id;
     private String productName;
     private int Price;
