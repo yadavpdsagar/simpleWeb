@@ -1,11 +1,13 @@
 package com.sagar.simpleWeb.Service;
 
 import com.sagar.simpleWeb.Model.Product;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 @Service
+
 public class ProductService {
     List<Product> products = Arrays.asList(
             new Product(101,"iphone",500),
@@ -13,5 +15,10 @@ public class ProductService {
     public List<Product> getProducts() {
         return products;
     }
-    
+
+    public Product getProductById(int id) {
+        return products.stream().filter(p->p.getId()==id)
+                .findFirst().get();
+
+    }
 }
