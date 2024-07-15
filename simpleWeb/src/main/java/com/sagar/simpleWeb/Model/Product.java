@@ -44,6 +44,15 @@ public class Product {
     public void setPrice(int price) {
         Price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", productName='" + productName + '\'' +
+                ", Price=" + Price +
+                '}';
+    }
 }
 
 
